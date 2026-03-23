@@ -46,8 +46,26 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
+
+---
+
+## Render Dashboard pe Build Command set karo
+
+> Render → Settings → **Build Command**:
+```
+./build.sh
+```
+
+> Render → Settings → **Start Command**:
+```
+gunicorn your_project_name.wsgi:application
 
 ROOT_URLCONF = 'iris_model.urls'
 
