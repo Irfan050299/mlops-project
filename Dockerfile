@@ -15,19 +15,3 @@ RUN chmod +x entrypoint.sh
 EXPOSE 8000
 
 CMD ["gunicorn", "iris_model.wsgi:application", "--bind", "0.0.0.0:10000"]
-```
-
-### Ya Render Dashboard mein Start Command:
-```
-gunicorn iris_model.wsgi:application --bind 0.0.0.0:10000
-```
-
-> ⚠️ Render **port 10000** use karta hai — 8000 nahi!
-
----
-
-## Problem 2 — DB Host Fix karo
-
-Render → **Environment Variables** mein daalo:
-```
-DB_HOST = srv1234.hstgr.io   ← Hostinger wala
