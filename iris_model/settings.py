@@ -57,7 +57,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('postgresql://iris_db_62vd_user:IbRZskgEEnWP3r5OET1ztmwhFJuPaXBI@dpg-d70nb9ndiees73dpft50-a/iris_db_62vd')
+        default=os.environ.get('DATABASE_URL')
     )
 }
 }
