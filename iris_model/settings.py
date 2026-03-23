@@ -53,15 +53,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'iris_model.wsgi.application'
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'iris_db'),
-        'USER': os.environ.get('DB_USER', 'root'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'root'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('postgresql://iris_db_62vd_user:IbRZskgEEnWP3r5OET1ztmwhFJuPaXBI@dpg-d70nb9ndiees73dpft50-a/iris_db_62vd')
+    )
+}
 }
 
 AUTH_PASSWORD_VALIDATORS = [
