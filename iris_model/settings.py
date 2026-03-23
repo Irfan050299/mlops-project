@@ -58,8 +58,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ---
 
 ## Render Dashboard pe Build Command set karo
-
-> Render → Settings → **Build Command**:
 ```
 ./build.sh
 ```
