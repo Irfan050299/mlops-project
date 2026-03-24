@@ -7,4 +7,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('predict/', views.PredictView.as_view()),
     path('history/', views.PredictionHistoryView.as_view()),
+    path('evaluate/', views.ModelEvalView.as_view())
 ]
