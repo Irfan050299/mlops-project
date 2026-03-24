@@ -78,4 +78,3 @@ class PredictionHistoryView(APIView):
             return Response({
                 "error": str(e)
             }, status=500)
-
